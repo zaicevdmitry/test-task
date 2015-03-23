@@ -125,7 +125,7 @@ class User
         }
 
         $query = "insert into user (username, email, surname, date_of_birth, login, password, avatar, salt)
-            values (:username, :email, :surname, :date_of_bith, :login, :password, :avatar, :salt)";
+            values (:username, :email, :surname, :date_of_birth, :login, :password, :avatar, :salt)";
         $hashes = $this->passwordHash($password);
         $sth = $this->db->prepare($query);
 
@@ -136,7 +136,7 @@ class User
                     ':username' => $username,
                     ':email' => $email,
                     ':surname' => $surname,
-                    ':date_of_bith' => $date_of_birth,
+                    ':date_of_birth' => $date_of_birth,
                     ':login' => $login,
                     ':password' => $hashes['hash'],
                     ':avatar' => $avatar,

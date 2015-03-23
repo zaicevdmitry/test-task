@@ -93,7 +93,7 @@ if(isset($_POST)){
         $_SESSION['addNewUserForm']['login'] = $login;
         $_SESSION['addNewUserForm']['password1'] = $password1;
         $_SESSION['addNewUserForm']['email'] = $email;
-        header('Location: register.php');
+        header('Location: http://'.$host.'/register.php');
     }
     try {
         $create = $user->create($username, $password1, $surname, $date_of_birth, $avatar, $email, $login);

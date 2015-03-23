@@ -18,14 +18,8 @@ if ( isset( $_SESSION['addNewUserForm'] ) ) {
     <meta charset="utf-8">
     <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" href="css/datepicker.css" type="text/css" />
-    <link rel="stylesheet" media="screen" type="text/css" href="css/layout.css" />
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="js/datepicker/datepicker.js"></script>
-    <script type="text/javascript" src="js/datepicker/eye.js"></script>
-    <script type="text/javascript" src="js/datepicker/utils.js"></script>
-    <script type="text/javascript" src="js/datepicker/layout.js?ver=1.0.2"></script>
 </head>
 
 <body>
