@@ -46,7 +46,7 @@
                 <?else:?>
                     <div class="visitor">Welcome username!!!</div>
                     <div class="login_form" style="float: right;">
-                        <form class="ajax" method="post" action="classes/logout.php">
+                        <form class="ajax" method="post" action="./classes/logout.php">
                             <input type="hidden" name="act" value="logout">
                             <div class="form-actions">
                                 <button class="btn btn-large btn-primary" type="submit">Logout</button>

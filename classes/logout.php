@@ -7,6 +7,10 @@ if ( session_id() ) {
     // и уничтожаем сессию
     session_unset();
     session_destroy();
+}else{
+    session_start();
+    session_unset();
+    session_destroy();
 }
 header('Location: http://'.$host.'/index.php');
 ?>
