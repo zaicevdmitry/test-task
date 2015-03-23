@@ -62,12 +62,12 @@ class User
         return $row["salt"];
     }
 
-    public function authorize($username, $password, $remember=false)
+    public function authorize($login, $password, $remember=false)
     {
         $query = "select id, username from user where
-            username = :username and password = :password limit 1";
+            login = :login and password = :password limit 1";
         $sth = $this->db->prepare($query);
-        $salt = $this->getSalt($username);
+        $salt = $this->getSalt($login);
 
         if (!$salt) {
             return false;
@@ -76,33 +76,29 @@ class User
         $hashes = $this->passwordHash($password, $salt);
         $sth->execute(
             array(
-                ":username" => $username,
+                ":login" => $login,
                 ":password" => $hashes['hash'],
             )
         );
         $this->user = $sth->fetch();
-        
+
         if (!$this->user) {
             $this->is_authorized = false;
         } else {
             $this->is_authorized = true;
             $this->user_id = $this->user['id'];
+            $this->username = $this->user['username'];
             $this->saveSession($remember);
         }
 
         return $this->is_authorized;
     }
 
-    public function logout()
-    {
-        if (!empty($_SESSION["user_id"])) {
-            unset($_SESSION["user_id"]);
-        }
-    }
 
     public function saveSession($remember = false, $http_only = true, $days = 7)
     {
         $_SESSION["user_id"] = $this->user_id;
+        $_SESSION["user_name"] = $this->username;
 
         if ($remember) {
             // Save session id in cookies
@@ -226,10 +222,7 @@ class User
     function check_code($code)
     {
         $code = trim($code);
-//        $code = md5($code);
-
         $cap = $_SESSION['user_code'];
-//        $cap = md5($cap);
 
         if ($code == $cap) {
             return true;

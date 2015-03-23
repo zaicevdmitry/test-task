@@ -174,9 +174,9 @@ font-size: 14px;
 .account {
     line-height: 1.714;
     position: absolute;
-    left: 1011.844px;
+    left: 948.844px;
     top: 32.25px;
-    width: 427px;
+    width: 495px;
     height: 24px;
     z-index: 426;
 }
@@ -792,4 +792,10 @@ width: 300px;
 }
 .save_button{
     padding: 10px 23px 10px 23px;
+}
+
+
+.logout{
+    float: right;
+    width: 57px;
 }

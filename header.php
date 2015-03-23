@@ -4,7 +4,8 @@
             <div class="logo company"></div>
             <div class="account ">
                 <div class="my_account"><a href="#">WISH LIST (<span id="count">0</span>)</a></div>
-                <div class="my_account"><a href="#">MY ACCOUNT</a></div>
+                <div class="my_account"><a href="news.php">NEWS</a></div>
+                <div class="my_account"><a href="account.php">MY ACCOUNT</a></div>
                 <div class="my_account"><a href="#">SHOPPING CART</a></div>
                 <div class="my_account"><a href="#">CHECKOUT</a></div>
             </div>
@@ -35,18 +36,23 @@
                 <?php if (!Auth\User::isAuthorized()):?>
                     <div class="visitor">Welcome visitor you can login or <a href="register.php">create</a> an account.</div>
                     <div class="login_form" style="float: right;">
-                        <form   action="./ajax.php" method="post">
+                        <form   action="./classes/login.php" method="post">
                             <span class="sign_in">Sign in:</span>
                             <input type="text" size="20" name="login" id="login_input">
                             <input type="password" size="20" name="password" id="login_input">
-                            <input type="hidden" name="act" value="login">
                             <input type="submit" value=">" id="button_login">
                         </form>
                     </div>
+                    <div class="social_block">
+                        <div class="img social"></div>
+                        <div class="facebook social"></div>
+                        <div class="twitter social"></div>
+                        <div class="skype social"></div>
+                    </div>
                 <?else:?>
-                    <div class="visitor">Welcome username!!!</div>
+                    <div class="visitor">Welcome <?= $_SESSION['user_name'].' ';?>!!!</div>
                     <div class="login_form" style="float: right;">
-                        <form class="ajax" method="post" action="./classes/logout.php">
+                        <form class="logout" method="post" action="./classes/logout.php">
                             <input type="hidden" name="act" value="logout">
                             <div class="form-actions">
                                 <button class="btn btn-large btn-primary" type="submit">Logout</button>
@@ -56,12 +62,7 @@
                 <?endif;?>
 
 
-                <div class="social_block">
-                    <div class="img social"></div>
-                    <div class="facebook social"></div>
-                    <div class="twitter social"></div>
-                    <div class="skype social"></div>
-                </div>
+
             </div>
 
         </div>
