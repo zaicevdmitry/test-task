@@ -274,11 +274,11 @@ font-size: 14px;
 
 /* Слайдер */
 .slides {
-    height:412px;
-    margin:50px auto;
-    overflow:hidden;
-    position:relative;
-    width:900px;
+    height: 430px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    width: 1080px;
 }
 .slides ul {
     list-style:none;
@@ -693,7 +693,7 @@ font-size: 14px;
     height: 285px !important;
     overflow: hidden;
     float: left;
-    width: 975px !important;
+    /*width: 1500px !important;*/
     margin-left: 0px;
 }
 
@@ -707,22 +707,26 @@ font-size: 14px;
 }
 
 .liquid .previous {
-    display:block;
+    display: block;
     height: 28px;
+    position: absolute;
+    left: 363px;
     width: 27px;
-    background-image:url(../image/prev.png);
-    float:left;
+    background-image: url(../image/prev.png);
+    float: left;
     margin: 115px 0 0 0;
-    padding:0;
+    padding: 0;
 }
 .liquid .next {
-    display:block;
+    display: block;
     height: 27px;
     width: 26px;
-    background-image:url(../image/next.png);
-    float:right;
+    position: absolute;
+    background-image: url(../image/next.png);
+    float: right;
+    right: 495px;
     margin: 115px 0 0 0;
-    padding:0;
+    padding: 0;
 }
 .liquid{
     width: 1030px !important;

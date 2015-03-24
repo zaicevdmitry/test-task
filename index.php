@@ -215,8 +215,13 @@ require_once './classes/Auth.class.php';
                         <li class="element">
                             <div class="product">
                                 <div class="detail">
-                                    <div class="image1"></div>
-                                    <div class="text">Astral Cruise</div>
+                                    <div class="background_image2 image">
+                                        <div class="hidden">
+                                            <button name="add_to_compare" class="add_to">Add to Compare</button>
+                                            <button name="add_to_compare" class="add_to">Add to Whislist</button>
+                                        </div>
+                                    </div>
+                                    <div class="text">Little Fella</div>
                                     <button class="add_to_cart"> ADD TO CART</button>
                                     <div class="price">
                                         <div class="dol"></div>
