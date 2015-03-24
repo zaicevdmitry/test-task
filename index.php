@@ -114,11 +114,11 @@ require_once './classes/Auth.class.php';
     <div id="wrapper">
         <div class="d-carousel">
             <ul class="carousel">
-                <li><img src="image/apple.png" alt="" /></li>
-                <li><img src="image/boss.png" alt="" /></li>
-                <li><img src="image/palm.png" alt="" /></li>
-                <li><img src="image/adidas.png" alt="" /></li>
-                <li><img src="image/boss.png" alt="" /></li>
+                <li><div class="images"><img src="image/apple.png" alt="" /></div> </li>
+                <li><div class="images"><img src="image/boss.png" alt="" /></div> </li>
+                <li><div class="images"><img src="image/palm.png" alt="" /></div> </li>
+                <li><div class="images"><img src="image/adidas.png" alt="" /></div> </li>
+                <li><div class="images"><img src="image/boss.png" alt="" /></div> </li>
             </ul>
         </div>
         <div class="clear"></div>

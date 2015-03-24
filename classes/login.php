@@ -27,7 +27,7 @@ $host  = $_SERVER['HTTP_HOST'];
 if(isset($_POST)) {
     $login = $_POST['login'];
     $password = $_POST["password"];
-    $remember = !!$_POST["remember"];
+    $remember = false;
 
 
     $user = new Auth\User();

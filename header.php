@@ -4,8 +4,10 @@
             <div class="logo company"></div>
             <div class="account ">
                 <div class="my_account"><a href="#">WISH LIST (<span id="count">0</span>)</a></div>
-                <div class="my_account"><a href="news.php">NEWS</a></div>
+                <div class="my_account"><a href="allnews.php">All NEWS</a></div>
+                <?php if (Auth\User::isAuthorized()):?>
                 <div class="my_account"><a href="account.php">MY ACCOUNT</a></div>
+                <?endif;?>
                 <div class="my_account"><a href="#">SHOPPING CART</a></div>
                 <div class="my_account"><a href="#">CHECKOUT</a></div>
             </div>
@@ -50,7 +52,7 @@
                         <div class="skype social"></div>
                     </div>
                 <?else:?>
-                    <div class="visitor">Welcome <?= $_SESSION['user_name'].' ';?>!!!</div>
+                    <div class="visitor">User: <?= $_SESSION['user_name'].' '.$_SESSION['surname'].'   Email:'.$_SESSION['email'];?> </div>
                     <div class="login_form" style="float: right;">
                         <form class="logout" method="post" action="./classes/logout.php">
                             <input type="hidden" name="act" value="logout">

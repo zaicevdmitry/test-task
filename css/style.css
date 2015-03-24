@@ -174,9 +174,9 @@ font-size: 14px;
 .account {
     line-height: 1.714;
     position: absolute;
-    left: 948.844px;
+    left: 930.844px;
     top: 32.25px;
-    width: 495px;
+    width: 533px;
     height: 24px;
     z-index: 426;
 }
@@ -224,7 +224,6 @@ font-size: 14px;
 }
 .img{
     background: url(../image/img.png) top repeat-y;
-
 }
 
 .social{
@@ -773,7 +772,7 @@ width: 300px;
     border-radius: 3px;
     background-color: rgb(255, 255, 255);
     box-shadow: inset 0.5px 0.866px 0px 0px rgba(0, 0, 0, 0.051);
-    width: 250px;
+    width: 100%;
     margin-top: 10px;
     height: 27px;
     z-index: 385;
@@ -798,4 +797,86 @@ width: 300px;
 .logout{
     float: right;
     width: 57px;
+}
+
+.input-textarea {
+    width: 100%;
+    height: 200px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0.5px 0.866px 0px 0px rgba(0, 0, 0, 0.051);
+    margin-top: 10px;
+    z-index: 385;
+}
+.table{width:100%;max-width:100%;margin-bottom:20px}
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th{
+    padding:8px;
+    line-height:1.42857143;
+    vertical-align:top;
+    border-top:1px solid #ddd}
+.table>thead>tr>th{
+    vertical-align:bottom;
+    border-bottom:2px solid #ddd}
+.table>caption+thead>tr:first-child>td,
+.table>caption+thead>tr:first-child>th,
+.table>colgroup+thead>tr:first-child>td,
+.table>colgroup+thead>tr:first-child>th,
+.table>thead:first-child>tr:first-child>td,
+.table>thead:first-child>tr:first-child>th{
+    border-top:0
+}
+.table>tbody+tbody{
+    border-top:2px solid #ddd
+}
+.table
+.table{
+    background-color:#fff
+}
+.table-condensed>tbody>tr>td,
+.table-condensed>tbody>tr>th,
+.table-condensed>tfoot>tr>td,
+.table-condensed>tfoot>tr>th,
+.table-condensed>thead>tr>td,
+.table-condensed>thead>tr>th{
+    padding:5px
+}
+
+li{
+    list-style-type: none !important;
+}
+
+.comments .commentlist {
+    padding: 10px 0 0;
+    position: relative;
+    list-style-type: none;
+}
+
+.comments .commentlist li {
+    margin: 10px 0 10px;
+    padding: 2px 0px 2px 5px;
+    list-style-type: none;
+    _margin-left: -42px;
+    _padding: 5px;
+}
+.comments .commentlist li .commentauthor {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.images img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+
+.images img:hover{
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
 }

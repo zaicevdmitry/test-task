@@ -46,12 +46,6 @@ if(isset($_POST)){
     if (empty(clean($login))) {
         $error = $error.'<li>Enter the login</li>'."\n";
     }
-    if (empty(clean($username))) {
-        $error = $error.'<li>Enter the your name</li>'."\n";
-    }
-    if (empty(clean($surname))) {
-        $error = $error.'<li>Enter the your surname</li>'."\n";
-    }
     if (empty($password1)) {
         $error = $error.'<li>Enter the password</li>'."\n";
     }
@@ -69,17 +63,17 @@ if(isset($_POST)){
     } else {
         $error = $error.'<li>Enter the email</li>'."\n";
     }
-    if (empty($date_of_birth)) {
-        $error = $error.'<li>Select an date of birth</li>'."\n";
+    if($_FILES["filename"]['name'] != '' && empty($_FILES["filename"]['name'])){
+        if ($_FILES["filename"]["size"] > 1024 * 2 * 1024) {
+            $error = $error.'<li>File size exceeds two megabytes</li>'."\n";
+        }
+        if (is_uploaded_file($_FILES["filename"]["tmp_name"])) {
+            move_uploaded_file($_FILES["filename"]["tmp_name"], '..'. DIRECTORY_SEPARATOR . "upload" . DIRECTORY_SEPARATOR . $_FILES["filename"]["name"]);
+        } else {
+            $error = $error.'<li>Error loading file</li>'."\n";
+        }
     }
-    if ($_FILES["filename"]["size"] > 1024 * 2 * 1024) {
-        $error = $error.'<li>File size exceeds two megabytes</li>'."\n";
-    }
-    if (is_uploaded_file($_FILES["filename"]["tmp_name"])) {
-        move_uploaded_file($_FILES["filename"]["tmp_name"], '..'. DIRECTORY_SEPARATOR . "upload" . DIRECTORY_SEPARATOR . $_FILES["filename"]["name"]);
-    } else {
-        $error = $error.'<li>Error loading file</li>'."\n";
-    }
+
     if ($_POST['user_code'] == '') {
         $error = $error.'<li>Enter the captcha</li>'."\n";
     }
@@ -88,11 +82,8 @@ if(isset($_POST)){
     }
     if ( !empty( $error ) ) {
         $_SESSION['addNewUserForm'] = array();
-        $_SESSION['addNewUserForm']['error'] = '<p class="errorMsg">При заполнениии формы были допущены ошибки:</p>'.
+        $_SESSION['addNewUserForm']['error'] = '<p class="errorMsg">Required fields:</p>'.
             "\n".'<ul class="errorMsg">'."\n".$error.'</ul>'."\n";
-        $_SESSION['addNewUserForm']['login'] = $login;
-        $_SESSION['addNewUserForm']['password1'] = $password1;
-        $_SESSION['addNewUserForm']['email'] = $email;
         header('Location: http://'.$host.'/register.php');
     }
     try {
@@ -101,9 +92,6 @@ if(isset($_POST)){
             $user->authorize($username, $password1);
 
             if (empty($hobby)) {
-                $this->setFieldError("username", "Select an hobby");
-                return;
-            } else {
                 if (is_array($hobby)) {
                     foreach ($hobby as $key => $value) {
                         $user->saveHobby($_SESSION["user_id"], $value);
@@ -113,9 +101,6 @@ if(isset($_POST)){
                 }
             }
             if (empty($education)) {
-                $this->setFieldError("username", "Select an education");
-                return;
-            } else {
                 $user->saveEducation($_SESSION["user_id"], $education);
             }
             header('Location: http://'.$host.'/index.php');
