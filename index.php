@@ -56,7 +56,7 @@ require_once './classes/Auth.class.php';
         <div class="products">
             <div class="product">
                 <div class="detail">
-                    <div class="image4"></div>
+                    <div class="background_image4 image"></div>
                     <div class="text">Mascot Kitti - White</div>
                     <button class="add_to_cart"> ADD TO CART</button>
                     <div class="price">
@@ -68,7 +68,7 @@ require_once './classes/Auth.class.php';
             </div>
             <div class="product">
                 <div class="detail">
-                    <div class="image3"></div>
+                    <div class="background_image3 image"></div>
                     <div class="text">Bite Me</div>
                     <button class="add_to_cart"> ADD TO CART</button>
                     <div class="price">
@@ -80,7 +80,7 @@ require_once './classes/Auth.class.php';
             </div>
             <div class="product">
                 <div class="detail">
-                    <div class="image2"></div>
+                    <div class="background_image2 image"></div>
                     <div class="text">Little Fella</div>
                     <button class="add_to_cart"> ADD TO CART</button>
                     <div class="price">
@@ -92,7 +92,7 @@ require_once './classes/Auth.class.php';
             </div>
             <div class="product">
                 <div class="detail">
-                    <div class="image1"></div>
+                    <div class="background_image1 image"></div>
                     <div class="text">Astral Cruise</div>
                     <button class="add_to_cart"> ADD TO CART</button>
                     <div class="price">
@@ -139,7 +139,12 @@ require_once './classes/Auth.class.php';
                         <li class="element">
                             <div class="product">
                                 <div class="detail">
-                                    <div class="image4"></div>
+                                    <div class="background_image4 image">
+                                        <div class="hidden">
+                                            <button name="add_to_compare" class="add_to">Add to Compare</button>
+                                            <button name="add_to_compare" class="add_to">Add to Whislist</button>
+                                        </div>
+                                    </div>
                                     <div class="text">Mascot Kitti - White</div>
                                     <button class="add_to_cart"> ADD TO CART</button>
                                     <div class="price">
@@ -153,7 +158,12 @@ require_once './classes/Auth.class.php';
                         <li class="element">
                             <div class="product">
                                 <div class="detail">
-                                    <div class="image3"></div>
+                                    <div class="background_image3 image">
+                                        <div class="hidden">
+                                            <button name="add_to_compare" class="add_to">Add to Compare</button>
+                                            <button name="add_to_compare" class="add_to">Add to Whislist</button>
+                                        </div>
+                                    </div>
                                     <div class="text">Bite Me</div>
                                     <button class="add_to_cart"> ADD TO CART</button>
                                     <div class="price">
@@ -167,7 +177,12 @@ require_once './classes/Auth.class.php';
                         <li class="element">
                             <div class="product">
                                 <div class="detail">
-                                    <div class="image2"></div>
+                                    <div class="background_image2 image">
+                                        <div class="hidden">
+                                            <button name="add_to_compare" class="add_to">Add to Compare</button>
+                                            <button name="add_to_compare" class="add_to">Add to Whislist</button>
+                                        </div>
+                                    </div>
                                     <div class="text">Little Fella</div>
                                     <button class="add_to_cart"> ADD TO CART</button>
                                     <div class="price">
@@ -181,7 +196,12 @@ require_once './classes/Auth.class.php';
                         <li class="element">
                             <div class="product">
                                 <div class="detail">
-                                    <div class="image1"></div>
+                                    <div class="background_image1 image">
+                                        <div class="hidden">
+                                            <button name="add_to_compare" class="add_to">Add to Compare</button>
+                                            <button name="add_to_compare" class="add_to">Add to Whislist</button>
+                                        </div>
+                                    </div>
                                     <div class="text">Astral Cruise</div>
                                     <button class="add_to_cart"> ADD TO CART</button>
                                     <div class="price">
