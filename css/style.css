@@ -24,6 +24,7 @@ body {
     padding-right: 15px;
     padding-left: 15px;
     width: 1096px;
+    height: 100%;
     margin: 0px auto 0;
     overflow: hidden;
 }
@@ -96,7 +97,7 @@ menu.hr li:hover, li:focus {
     background-color: rgb(245, 73, 34);
 }
 .hr li ul li a{
-font-size: 14px;
+    font-size: 14px;
     font-family: "TerminalDosis";
     color: rgb(119, 119, 119);
     line-height: 2.143;
@@ -748,7 +749,7 @@ font-size: 14px;
 /*-----------------------------------------------------------------------------------*/
 
 .form_registration{
-width: 300px;
+    width: 300px;
 }
 .input-block-level{
     border-radius: 3px;
@@ -900,4 +901,92 @@ li{
     top: 0px;
     z-index: 99999;
 }
+.copyrigth {
+    box-shadow: 0px 5px 0px 0px rgba(78, 78, 78, 0.02);
+    background-image: -moz-linear-gradient( 90deg, rgb(79,79,79) 0%, rgb(73,73,73) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(79,79,79) 0%, rgb(73,73,73) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(79,79,79) 0%, rgb(73,73,73) 100%);
+    width: 100%;
+    height: 67px;
+}
+.about {
+    background: url(../image/footer2.png);
+    box-shadow: inset 0px 5px 9px 0px rgba(0, 0, 0, 0.031);
+    width: 100%;
+    height: 270px;
+}
 
+.suspendisse{
+    background: url(../image/footer1.png);
+    box-shadow: 0px 5px 0px 0px rgba(222, 213, 183, 0.361);
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0px;
+    height: 138px;
+
+}
+.Suspendisse_sed {
+    font-size: 18px;
+    font-family: "Telegrafico";
+    color: rgb(116, 114, 114);
+    line-height: 1.333;
+    text-align: left;
+    width: 149px;
+    height: 10px;
+    z-index: 68;
+}
+
+p.footer{
+    font-size: 14px;
+    font-family: "TerminalDosis";
+    color: rgb(125, 114, 83);
+    line-height: 1.714;
+    text-align: left;
+    width: 267px;
+    height: 62px;
+    z-index: 67;
+}
+
+.lamp{
+    margin-top: 20px;
+    float: left;
+    width: 330px;
+    margin-left: 35px;
+}
+.footer_text{
+    float: left;
+    width: 188px;
+    margin-left: 19px;
+    margin-top: 20px;
+}
+
+p.about_text{
+    font-size: 14px;
+    font-family: "TerminalDosis";
+    color: #ffffff;
+    line-height: 1.714;
+    text-align: left;
+    height: 62px;
+    z-index: 67;
+}
+.sed{
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Telegrafico";
+    line-height: 1.333;
+    text-align: left;
+    width: 149px;
+    height: 10px;
+    z-index: 68;
+}
+.powered_by_opencart {
+    font-size: 14px;
+    font-family: "Telegrafico";
+    color: rgb(132, 132, 132);
+    line-height: 5.714;
+    text-transform: uppercase;
+    text-align: left;
+    height: 7px;
+    z-index: 30;
+}

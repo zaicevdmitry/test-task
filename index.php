@@ -15,7 +15,6 @@ require_once './classes/Auth.class.php';
     <title>Company</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <!--    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>-->
     <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.liquidcarousel.pack.js"></script>
@@ -29,7 +28,7 @@ require_once './classes/Auth.class.php';
 </head>
 <body>
 <div class="container-fluid">
-    <?php include('header.php');?>
+<?php include('header.php');?>
 
 <div class="slides">
     <ul> <!-- Слайды -->
@@ -238,9 +237,9 @@ require_once './classes/Auth.class.php';
         </div>
     </div>
 </div>
-</div>
-<footer>
 
-</footer>
+<?php include('footer.php');?>
+</div>
+
 </body>
 </html>
